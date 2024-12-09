@@ -369,7 +369,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-HEAD
 export interface ApiBrandBrand extends Struct.CollectionTypeSchema {
   collectionName: 'brands';
   info: {
@@ -976,8 +975,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-HEAD
-
       'api::brand.brand': ApiBrandBrand;
       'api::detail.detail': ApiDetailDetail;
       'api::guitar.guitar': ApiGuitarGuitar;
