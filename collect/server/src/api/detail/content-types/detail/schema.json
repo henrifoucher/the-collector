@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "details",
+  "info": {
+    "singularName": "detail",
+    "pluralName": "details",
+    "displayName": "Detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "wood": {
+      "type": "string"
+    },
+    "pickups": {
+      "type": "string"
+    },
+    "guitar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::guitar.guitar",
+      "mappedBy": "detail"
+    }
+  }
+}
