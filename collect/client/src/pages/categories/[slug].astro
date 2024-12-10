@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+// import ProductsList from "../../components/ProductsList.astro";
+import fetchApi from "../../lib/strapi";
+
+export async function getStaticPaths() {
+    const details = await fetchApi({
+        endpoint: "categories",
+        wrappedByKey: "data",
+    });
+
+    return details.map((detail) => ({
+        params: { slug: detail.slug },
+        props: category,
+    }));
+}
+
+const { detail } = Astro.props;
+---
+
+<Layout pageTitle={category.name}>
+    <h2>Products in the <span>{category.name}</span> category</h2>
+    <!-- <ProductsList products={category.products} /> -->
+</Layout>
