@@ -1,4 +1,6 @@
 ---
+import "../styles/reset.css";
+import "../styles/global.css";
 import Head from "../components/Head.astro";
 const { pageTitle } = {
 	pageTitle: "Astro",
@@ -7,7 +9,7 @@ const { pageTitle } = {
 
 <!doctype html>
 <html lang="en">
-	<Head />
+	<Head {pageTitle} />
 	<body>
 		<slot />
 	</body>
